@@ -1,0 +1,30 @@
+package com.Admin.service;
+
+import java.util.List;
+import java.util.Set;
+
+import com.Admin.domain.User;
+import com.Admin.domain.security.UserRole;
+
+
+
+public interface UserService {
+	
+	
+	User createUser(User user, Set<UserRole> userRoles) throws Exception;
+	
+	User save(User user);
+
+	// define contract of getAllUsers 
+	List<User> getAllUsers();
+    
+    void lockUserById(Long id);
+    
+    void unlockUserById(Long id); 
+    
+    void lockUsersByIds(List<Long> userIds);
+    
+    void unlockUsersByIds(List<Long> userIds);
+    
+}
+

@@ -1,0 +1,43 @@
+package com.ClothStore.service;
+
+import java.util.Set;
+
+import com.ClothStore.domain.User;
+import com.ClothStore.domain.UserBilling;
+import com.ClothStore.domain.UserPayment;
+import com.ClothStore.domain.UserShipping;
+import com.ClothStore.domain.security.PasswordResetToken;
+import com.ClothStore.domain.security.UserRole;
+
+
+
+public interface UserService {
+	
+	PasswordResetToken getPasswordResetToken(final String token);
+	
+	// define contract to generate random password for user 
+	void createPasswordResetTokenForUser(final User user, final String token);
+	
+	// define contract to find username for user
+	User findByUsername(String username);
+	
+	// define contract to find email for user
+	User findByEmail (String email);
+	
+	// define contract to create the user 
+	User createUser(User user, Set<UserRole> userRoles) throws Exception;
+	
+	User findById(Long id);
+		
+	User save(User user);
+
+	void updateUserBilling(UserBilling userBilling, UserPayment userPayment, User user);
+	
+	void updateUserShipping(UserShipping userShipping, User user);
+
+	void setUserDefaultPayment(Long userPaymentId, User user);
+	
+	void setUserDefaultShipping(Long userShippingId, User user);
+	
+
+}

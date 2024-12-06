@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header :: common-header" />
+
+<body>
+	<div th:replace="common/header :: navbar" />
+
+	
+	<div class="container">
+		<div class="row" style="margin-bottom: -60px;">
+			<div class="col-xs-8">
+				<h2 class="section-headline">
+					<span>Error</span>
+				</h2>
+			</div>
+			<div class="col-xs-3">
+				<img src="/image/logo3.png" class="img-responsive" />
+			</div>
+		</div>
+		<hr
+			style="position: absolute; width: 100%; height: 6px; background-color: #333; z-index: -1; margin-top: -80px;" />
+		<img class="img-responsive" src="/image/wood.png"
+			style="margin-top: -75px;" />
+
+		<div class="row" style="margin-top:10px">
+			<div class="col-xs-9 col-xs-offset-3">
+				<h5>Error: Invalid request path detected. Click <a
+						th:href="@{/}">here</a> to redirect to the home page.</h5>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+		<div th:replace="common/header :: footer" />
+
+
+	<div th:replace="common/header :: body-bottom-scripts" />
+</body>
+</html>

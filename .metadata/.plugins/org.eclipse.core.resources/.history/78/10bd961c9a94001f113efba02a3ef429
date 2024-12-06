@@ -1,0 +1,30 @@
+package com.ClothStore.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.ClothStore.domain.BillingAddress;
+import com.ClothStore.domain.UserBilling;
+import com.ClothStore.service.BillingAddressService;
+
+
+
+@Service
+public class BillingAddressServiceImpl implements BillingAddressService{
+												  
+	public BillingAddress setByUserBilling(UserBilling userBilling, BillingAddress billingAddress) {
+		// setBillingAddressName
+		billingAddress.setBillingAddressName(userBilling.getUserBillingName());
+		// setBillingAddressStreet1
+		billingAddress.setBillingAddressStreet1(userBilling.getUserBillingStreet1());
+		// setBillingAddressStreet2
+		billingAddress.setBillingAddressStreet2(userBilling.getUserBillingStreet2());
+		// setBillingAddressCity
+		billingAddress.setBillingAddressCity(userBilling.getUserBillingCity());
+		// setBillingAddressState
+		billingAddress.setBillingAddressState(userBilling.getUserBillingState());
+		billingAddress.setBillingAddressCountry(userBilling.getUserBillingCountry());
+		billingAddress.setBillingAddressZipcode(userBilling.getUserBillingZipcode());
+		
+		return billingAddress;
+	}
+}

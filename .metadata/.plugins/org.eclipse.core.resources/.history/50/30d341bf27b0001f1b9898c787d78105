@@ -1,0 +1,10 @@
+package com.ClothStore.service;
+
+import com.ClothStore.domain.ShippingAddress;
+import com.ClothStore.domain.UserShipping;
+
+public interface ShippingAddressService {
+	
+	ShippingAddress setByUserShipping(UserShipping userShipping, ShippingAddress shippingAddress);
+
+}

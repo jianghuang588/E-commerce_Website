@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;ClothStore/src/main/resources/message.properots&apos;" deleteContents="false" description="Delete resource &apos;ClothStore/src/main/resources/message.properots&apos;" element1="/ClothStore/src/main/resources/message.properots" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1732420655741"/>
+</session>

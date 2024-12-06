@@ -1,0 +1,149 @@
+<!doctype html>
+
+
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header :: common-header" />
+
+<div th:replace="common/header :: navbar" />
+
+<body style="background-color: #f0f0f0;">
+	<div class="container">
+		<div class="row" style="margin-bottom: -100px;">
+			<div class="col-xs-8">
+				<h2 class="section-headline">
+					<span>Product Catalog</span>
+				</h2>
+			</div>
+		</div>
+		
+		<hr
+			style="position: absolute; width: 100%; height: 6px; background-color: #333; z-index: -1; margin-top: -80px;" />
+		<img class="img-responsive" src="/image/wood.png"
+			style="margin-top: -75px;" />
+
+
+
+		<div class="row" style="margin-top: 60px;">
+			<div class="col-xs-3">
+				<h3>
+					<label for="category">Category</label>
+				</h3>
+				<div class="list-group" id="category">
+					<a th:href="@{/shirtshelf(category='all')}"
+						th:classappend="${activeAll}? 'active'" class="list-group-item">All</a>
+					<a th:href="@{/searchByCategory(category='T-Shirts')}"
+						th:classappend="${activeManagement}? 'active'"
+						class="list-group-item">T-Shirts</a> <a
+						th:href="@{/searchByCategory(category='V-Neck-Shirt')}"
+						th:classappend="${activeFiction}? 'active'"
+						class="list-group-item">V-Neck-Shirt</a> <a
+						th:href="@{/searchByCategory(category='Crew-Neck-Shirt')}"
+						th:classappend="${activeEngineering}? 'active'"
+						class="list-group-item">Crew-Neck-Shirt</a> <a
+						th:href="@{/searchByCategory(category='Graphic-Tee')}"
+						th:classappend="${activeProgramming}? 'active'"
+						class="list-group-item">Graphic-Tee</a> <a
+						th:href="@{/searchByCategory(category='Pocket-Tee &amp; Ringer-Tee')}"
+						th:classappend="${activeArtsLiterature}? 'active'"
+						class="list-group-item">Pocket-Tee &amp; Ringer-Tee</a>
+				</div>
+			</div>
+
+
+			<div class="col-xs-9">
+				<div th:if="${emptyList}">
+					<h5 style="font-style: italic;">Unfortunately, there is no
+						result. Try something else or give it another go later.</h5>
+				</div>
+
+				<table border="0" id="shirtList">
+					<thead>
+						<tr>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="shirt-item" data-th-each="shirt : ${shirtList}">
+							<td>
+								<div th:if="${shirt != null}">
+									<div class="row">
+										<div class="col-xs-3">
+											
+											<!--  -->
+											<a ><img
+												class="img-responsive shelf-shirt"
+												th:src="#{adminPath}+@{/image/shirt/}+${shirt.id}+'.png'"
+												style="margin-top: 20px;" /></a>
+										</div>
+										<div class="col-xs-9">
+											<a th:href="@{/shirtDetail?id=}+${shirt.id}"><h4
+													th:text="${shirt.title}"></h4></a> <span
+												th:text="${shirt.publicationDate}"></span>
+											<p th:text="${shirt.author}"></p>
+
+
+											<a th:href="@{/shirtDetail?id=}+${shirt.id}"> <span
+												th:text="'Universal Product Code:'"></span>
+
+											</a> <span th:text="${shirt.numberOfPages}"><span>
+													pages</span></span><br /> <a th:href="@{/shirtDetail?id=}+${shirt.id}"><span
+												style="font-size: x-large; color: #db3208;">$<span
+													th:text="${#numbers.formatDecimal(shirt.ourPrice, 0 , 'COMMA', 2, 'POINT')}"></span></span></a>
+
+											<span style="text-decoration: line-through;">$<span
+												th:text="${#numbers.formatDecimal(shirt.listPrice, 0 , 'COMMA', 2, 'POINT')}"></span></span>
+
+											<p th:utext="${#strings.abbreviate(shirt.description, 600)}"></p>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+			</div>
+		</div>
+	</div>
+	<!-- end of container -->
+
+
+	<div th:replace="common/header :: footer" />
+
+
+	<div class="container"></div>
+
+	<div th:replace="common/header :: body-bottom-scripts" />
+
+
+	<!-- datatable plugin from js, css-->
+	<!-- ensure data is not process by thymeleaf -->
+	<script th:inline="none">
+		$(document).ready(
+				function() {
+					$('#shirtList').DataTable(
+							{
+								"lengthMenu" : [ [ 5, 10, 15, 20, -1 ],
+										[ 5, 10, 15, 20, "All" ] ],
+								"ordering" : false,
+								stateSave : true
+							});
+
+					$("#shirtList").on('page.dt', function() {
+						$('html, body').animate({
+							scrollTop : $('#shirtList').offset().top
+						}, 200);
+					});
+				});
+	</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

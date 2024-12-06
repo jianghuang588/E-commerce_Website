@@ -1,0 +1,314 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+	xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head th:fragment="common-header">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<title>ClothStore Header</title>
+
+<!-- Bootstrap core CSS -->
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+
+
+<!-- panel for description -->
+<script
+	src="https://cdn.tiny.cloud/1/hvos3clzb70c54zzhydmzmqk5g0itt6m4gy6qgtrfrc0mm5d/tinymce/6/tinymce.min.js"
+	referrerpolicy="origin"></script>
+<script>
+	tinymce.init({
+		selector : 'textarea'
+	});
+</script>
+
+
+<!-- Custom styles for this template -->
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+<link rel="icon" href="/image/logo.png" />
+
+
+<!-- data table -->
+<link th:href="@{/css/jquery.dataTables.min.css}" rel="stylesheet" />
+<link th:href="@{/css/dataTables.bootstrap.min.css}" rel="stylesheet" />
+<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
+
+
+</head>
+
+
+
+
+<body>
+
+	<div th:fragment="navbar">
+		<style>
+.navbar-default {
+	background-color: #a32222;
+	border-color: #293872;
+}
+
+.navbar-default .navbar-brand {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
+	{
+	color: #f8f9f8;
+}
+
+.navbar-default .navbar-text {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus
+	{
+	color: #f8f9f8;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover,
+	.navbar-default .navbar-nav>.active>a:focus {
+	color: #f8f9f8;
+	background-color: #293872;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover,
+	.navbar-default .navbar-nav>.open>a:focus {
+	color: #f8f9f8;
+	background-color: #293872;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #293872;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+	{
+	background-color: #293872;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #ecf0f1;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: #ecf0f1;
+}
+
+.navbar-default .navbar-link {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-link:hover {
+	color: #f8f9f8;
+}
+
+@media ( max-width : 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+		color: #ecf0f1;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+		.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+		color: #f8f9f8;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>.active>a,
+		.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover,
+		.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
+		color: #f8f9f8;
+		background-color: #293872;
+	}
+}
+</style>
+		<nav class="navbar navbar-default navbar-static-top"
+			style="margin-top: -20px;">
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" th:href="@{/}">Admin Portal</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Shirt <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a th:href="@{/shirt/add}">Add a new shirt</a></li>
+								<li><a th:href="@{/shirt/shirtList}">View shirt list</a></li>
+							</ul></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+
+
+						<li><a th:href="@{/logout}">Sign out</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+   
+   <!-- 
+   
+   
+   <div th:fragment="footer" >
+		<br /> <br />
+		<footer>
+			<div class="row">
+				<div class="col-xs-3 footerleft">
+					<div class="logofooter">
+						<a th:href="@{/}"> <img th:src="@{/image/new.png}"
+							class="img-responsive" style="width: 200px;" />
+						</a>
+					</div>
+
+					<p>
+						Huang's Independent Shirt Store. <br />Ensuring the highest
+						quality for our customers
+					</p>
+				</div>
+				<div class="col-xs-3 paddingtop-bottom">
+					<h6 class="heading7">CONTACT</h6>
+					<ul class="post">
+						<p>
+							<i class="fa fa-map-pin"></i> 144-10 Roosevelt Ave<br />
+							Flushing NY, USA 11354
+						</p>
+						<p>
+							<i class="fa fa-phone"></i> Phone (USA) : +1 718 844 9509
+						</p>
+						<p>
+							<i class="fa fa-envelope"></i> E-mail : jianghuang588@gmail.com
+						</p>
+					</ul>
+				</div>
+				<div class="col-xs-3 paddingtop-bottom">
+					<h6 class="heading7">Resources</h6>
+					<ul class="footer-ul">
+						<li><a href="#"> Privacy Guidelines</a></li>
+						<li><a href="#"> Service &#38; Agreement</a></li>
+						<li><a href="#"> Common Inquiries</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 paddingtop-bottom">
+					<h6 class="heading7">Operating Hours</h6>
+					<div class="post">
+						<p>Monday - Saturday: 11am - 8pm</p>
+						<p>Sunday: 8am - 12pm</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="copyright">
+			<div class="col-md-6">
+				<p>© 2024 - Copyright Retained</p>
+			</div>
+			<div class="col-md-6">
+				<ul class="bottom_ul">
+					<li><a href="#">About Our Team</a></li>
+					<li><a href="#">Articles</a></li>
+					<li><a href="#">Customer Support</a></li>
+					<li><a href="#">Reach Us</a></li>
+					<li><a href="#">Website Overview</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+    -->
+	
+
+
+		<div th:fragment="footer">
+		<br /> <br />
+		<footer>
+			<div class="row">
+				<div class="col-xs-3 footerleft">
+					
+					
+					
+					
+					<div class="logofooter">
+						<a th:href="@{/}"> <img th:src="@{/image/logo2.png}"
+							class="img-responsive" style="width: 200px;" />
+						</a>
+					</div>
+					
+					
+					<p>
+						Huang's Independent Shirt Store. <br />Ensuring the highest
+						quality for our customers
+					</p>
+				</div>
+				<div class="col-xs-3 paddingtop-bottom">
+					<h6 class="heading7">CONTACT</h6>
+					<ul class="post">
+						<p>
+							<i class="fa fa-map-pin"></i> 144-10 Roosevelt Ave<br />
+							Flushing NY, USA 11354
+						</p>
+						<p>
+							<i class="fa fa-phone"></i> Phone (USA) : +1 718 844 9509
+						</p>
+						<p>
+							<i class="fa fa-envelope"></i> E-mail : jianghuang588@gmail.com
+						</p>
+					</ul>
+				</div>
+				<div class="col-xs-3 paddingtop-bottom">
+					<h6 class="heading7">Resources</h6>
+					<ul class="footer-ul">
+						<li><a href="#"> Privacy Guidelines</a></li>
+						<li><a href="#"> Service &#38; Agreement</a></li>
+						<li><a href="#"> Common Inquiries</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 paddingtop-bottom">
+					<h6 class="heading7">Operating Hours</h6>
+					<div class="post">
+						<p>Monday - Saturday: 11am - 8pm</p>
+						<p>Sunday: 8am - 12pm</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="copyright">
+			<div class="col-md-6">
+				<p>© 2024 - Copyright Retained</p>
+			</div>
+			<div class="col-md-6">
+				<ul class="bottom_ul">
+					<li><a href="#">About Our Team</a></li>
+					<li><a href="#">Articles</a></li>
+					<li><a href="#">Customer Support</a></li>
+					<li><a href="#">Reach Us</a></li>
+					<li><a href="#">Website Overview</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+		
+	
+
+	
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+package com.ClothStore.repository;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ClothStore.domain.CartItem;
+import com.ClothStore.domain.Order;
+import com.ClothStore.domain.ShoppingCart;
+
+@Transactional
+public interface CartItemRepository extends CrudRepository<CartItem, Long> {
+
+	List<CartItem> findByShoppingCart(ShoppingCart shoppingCart);
+	
+	// retrive  specific  product id from the caritem table 
+	List<CartItem> findByOrder(Order order);
+	
+	
+}

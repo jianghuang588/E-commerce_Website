@@ -1,0 +1,66 @@
+package com.ClothStore.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ClothStore.domain.Shirt;
+import com.ClothStore.repository.ShirtRepository;
+import com.ClothStore.service.ShirtService;
+
+@Service
+public class ShirtServiceImpl implements ShirtService {
+	@Autowired
+
+	private ShirtRepository clothingRepository;
+
+	public List<Shirt> findAll() {
+		List<Shirt> clothingList = (List<Shirt>) clothingRepository.findAll();
+		
+		List<Shirt> availableShirtList = new ArrayList<>();
+
+		for (Shirt cloth : clothingList) {
+			if (cloth.isActive()) {
+				availableShirtList.add(cloth);
+			}
+		}
+
+		return availableShirtList;
+	}
+	
+
+	public Shirt findOne(Long identity) {
+		return clothingRepository.findById(identity).orElse(null);
+	}
+	
+	public List<Shirt> findByCategory(String kind) {
+		List<Shirt> shirtSelection = clothingRepository.findByCategory(kind);
+
+		List<Shirt> availableShirts = new ArrayList<>();
+
+		for (Shirt cloth : shirtSelection) {
+			if (cloth.isActive()) {
+				availableShirts.add(cloth);
+			}
+		}
+
+		return availableShirts;
+	}
+	
+	public List<Shirt> blurrySearch(String header) {
+		List<Shirt> shirtKind = clothingRepository.findByTitleContaining(header);
+		List<Shirt> availableShirtCollection = new ArrayList<>();
+
+		for (Shirt shirt : shirtKind) {
+			if (shirt.isActive()) {
+				availableShirtCollection.add(shirt);
+			}
+		}
+
+		return availableShirtCollection;
+	}
+	
+
+}

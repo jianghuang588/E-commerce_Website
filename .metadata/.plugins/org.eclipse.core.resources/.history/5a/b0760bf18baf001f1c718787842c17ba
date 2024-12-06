@@ -1,0 +1,30 @@
+package com.ClothStore.service;
+
+import java.util.List;
+
+import com.ClothStore.domain.CartItem;
+import com.ClothStore.domain.Order;
+import com.ClothStore.domain.Shirt;
+import com.ClothStore.domain.ShoppingCart;
+import com.ClothStore.domain.User;
+
+public interface CartItemService {
+	
+	// define contract to save the item that user place in the shopping cart before
+	List<CartItem> findByShoppingCart(ShoppingCart shoppingCart);
+	
+	CartItem updateCartItem(CartItem cartItem);
+	
+	CartItem addShirtToCartItem(Shirt shirt, User user, int qty);
+
+	CartItem findById(Long id);
+
+	void removeCartItem(CartItem cartItem);
+	
+	CartItem save(CartItem cartItem);
+
+	// define contract to find the order information 
+	List<CartItem> findByOrder(Order order);
+
+	
+}

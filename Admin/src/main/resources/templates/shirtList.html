@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header :: common-header" />
+
+<body style="background-color: #f2f2f2;">
+
+	<div th:replace="common/header :: navbar" />
+	<div class="container">
+
+
+
+		<legend class="center-block"
+			style="font-weight: bold; font-size: 40px; margin-top: 45px;">
+			Shirt Management </legend>
+
+	
+		<div style="display: flex; ">
+			<img th:src="@{/image/logo3.png}" class="img-responsive"
+				style="width: 160px;">
+		</div>
+
+		<div class="table-responsive" >
+			<table id="ClothListTable"
+				class="table table-bordered table-hover table-striped">
+				<thead>
+					<tr>
+						<th><input th:id="selectAllShirts" type="checkbox" /></th>
+						<th>Name</th>
+						<th>Color</th>
+						<th>Types</th>
+						<th>Standard Price</th>
+						<th>Current Price</th>
+						<th>Enable?</th>
+						<th>Function</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-th-each="shirt : ${shirtList}">
+						<td><input hidden="hidden" name="id" th:value="${shirt.id}" />
+							<input th:id="'selected'+${shirt.id}" class="checkboxShirt"
+							type="checkbox" /></td>
+						<td><a th:href="@{/shirt/shirtInfo(id=${shirt.id})}"><span
+								th:text="${shirt.title}"></span></a></td>
+						<td th:text="${shirt.author}"></td>
+						<td th:text="${shirt.category}"></td>
+						<td th:text="${shirt.listPrice}"></td>
+						<td th:text="${shirt.ourPrice}"></td>
+						<td th:text="${shirt.active}"></td>
+						<td><input hidden="hidden" name="id" th:value="${shirt.id}" />
+							<button th:id="'oneShirt-'+${shirt.id}"
+								class="btn btn-danger btn-xs delete-shirt" type="submit"
+								value="delete">
+								<span class="fa fa-times"></span>Delete
+							</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<button th:id="deleteSelected" class="btn btn-danger"
+			>Delete Selected</button>
+	</div>
+
+
+
+
+	<div th:replace="common/header :: footer" />
+	<div th:replace="common/header :: body-bottom-scripts" />
+
+
+	<script th:inline="none">
+		$(document).ready(
+				function() {
+					$("#ClothListTable").DataTable(
+							{
+								"lengthMenu" : [ [ 5, 10, 15, 20, -1 ],
+										[ 5, 10, 15, 20, "All" ] ],
+								"ordering" : false,
+								stateSave : true
+							});
+				});
+	</script>
+
+
+
+
+
+</body>
+
+</html>
+
