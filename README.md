@@ -44,43 +44,29 @@ Powerful tools for managing users, inventory, and analytics.
 ## :star: Functional Overview
 Explore the core features of ShirtStore, structured as follows:
 
-### 1. My Account Dashboard
-- View and update account details.
-- Access order history.
-- Manage personal preferences.
-
+### 1.
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c9de9847-2ecf-4a39-88b1-7add08ad20a2" alt="My Account Dashboard" width="80%">
+   <img src="https://github.com/user-attachments/assets/70309fed-cf43-4abd-8bac-aab19b859d6d" alt="My Account Dashboard" width="80%">
 </p>
+
 
 ---
 
-### 2. Browse Shirt
-- Explore shirts through an intuitive interface.
-- Filter by size, color, and price for quick navigation.
-
+### 2. 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/52702659-6a0c-4f14-ae8c-49df96665bd3" alt="Browse Shirt" width="80%">
 </p>
 
 ---
 
-### 3. Shopping Cart
-- Add or remove items from the cart.
-- Adjust quantities before checkout.
-- Seamlessly proceed to the payment process.
-
+### 3.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/869a238a-d114-4fc8-90d9-ef249793b07e" alt="Shopping Cart" width="80%">
 </p>
 
 ---
 
-### 4. Admin Portal – User and Shirt Management
-- Manage user accounts efficiently.
-- Oversee shirt inventory.
-- Utilize analytics for better decision-making.
-
+### 4.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/33973fe3-bbdb-4434-972d-bf5aa5a15dba" alt="Admin Portal" width="80%">
 </p>
