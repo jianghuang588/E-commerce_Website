@@ -1,14 +1,14 @@
 # :package: ShirtStore Project 
 
- ## Overview
+ ## Abstract
 The E-Commerce website for the shirt store uses HTML, CSS, Javascript, Java, Spring Framework, Thymeleaf, Hibernate, and MYSQL. The key functionality focuses on user signup and login, user profile management, product management, shopping cart, order checkout and order history, and automatic email confirmation.
 
 ---
 
-## :rocket: Quick Preview
+## :rocket: Snapshot
 Below is an animated overview of the ShirtStore platform's functionality. Click on each section below to expand and view a screencast GIF demonstrating the feature in action.
 
-**User Journey**:  
+**Navigation Path**:  
 **Step 1: My Account Dashboard** → **Step 2: Browse Shirt** → **Step 3: Shopping Cart** → **Step 4: Admin Portal – User and Shirt Management**
 
 <details>
