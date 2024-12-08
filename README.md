@@ -86,32 +86,29 @@ Discover the basic characteristics of ShirtStore, which are organized in the fol
 - **Frontend**:
   - **CSS**: Styles are designed to be attractive in appearance.
   - **HTML**: Creates the layout of the website's page.
-  - **JavaScript**: Pass the interaction from frontend to backend.
+  - **JavaScript**: Pass the user interaction from frontend to backend.
   - **Thymeleaf**: Renders changes in data across websites, using Spring Boot.
 - **Backend**:
   - **Spring Boot**: Manages business logic and consumer relationships.
   - **MySQL**: Handles and saves data.
   - **Spring Security**: Ensures safe verification and entry restriction.
 
-### AdminPortal (Administrative Layout)
+### AdminPortal (Administrative Layout) 
 - **Frontend**:
-  - **HTML**: Designs the structure and layout of the admin interface.
-  - **CSS**: Styles the admin portal for a clean and professional look.
-  - **Thymeleaf**: Renders dynamic content to streamline administrative workflows.
+  - **CSS**: Styles manage the interface in a neat and expert manner.
+  - **HTML**: Creates the layout of the administrative portal.
+  - **Thymeleaf**: Renders interactive material to improve the operation of administration.
 - **Backend**:
-  - **Spring Boot**: Handles administrative logic and data processing.
-  - **MySQL**: Stores data related to users, orders, and inventory.
-  - **Spring Security**: Manages secure authentication and role-based access control.
-  - **JavaScript**: Adds backend interactivity and dynamic features.
+  - **JavaScript**: Transfer input from users from frontend to backend.
+  - **MySQL**: Handles data about users. 
+  - **Spring Boot**: Manages operational logic and data processes.
+  - **Spring Security**: Ensures safe verification and role-based authorization.
 
-### Shared Components
+### Shared Resources
 - **Database**:
-  - **MySQL**: Centralized database shared by Bookstore and AdminPortal to maintain data consistency.
+  - **MySQL**: To ensure uniformity of data, Shirtstore and AdminPortal share the same database.
 - **Security**:
-  - **Spring Security**: Unified authentication and access control across both systems.
-
-
-
+  - **Spring Security**: Authorization along with access control are shared throughout the two services.
 
 ---
 
