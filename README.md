@@ -41,8 +41,8 @@ Powerful tools for managing users, inventory, and analytics.
 
 
 ---
-## :star: Functional Overview
-Explore the core features of ShirtStore, structured as follows:
+## :star: Feature Highlights
+Discover the basic characteristics of ShirtStore, which are organized in the following order:
 
 ### 1.
 <p align="center">
@@ -73,7 +73,6 @@ Explore the core features of ShirtStore, structured as follows:
 
 ---
 ## :chart_with_upwards_trend: Entity-Relationship Diagram (ERD)
-The ERD visualizes relationships between key entities in the ShirtStore database, ensuring a structured data flow and interaction model.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/614052d6-d0af-47f4-a014-0ecd7a603b48" alt="ERD Diagram" width="80%">
@@ -81,12 +80,26 @@ The ERD visualizes relationships between key entities in the ShirtStore database
 
 ---
 
-## :hammer: Technologies Used
-This project was built using:
-- **Frontend**: Kotlin, Android Studio
-- **Backend**: Firebase (Authentication, Realtime Database)
-- **APIs**: RESTful APIs
-- **Database**: SQLite (Local), Firebase Realtime Database (Cloud)
+## :hammer: Implementation Tools
+
+### Bookstore (Customer-Facing Front-End)
+- **Frontend**:  
+  [Technology/Framework] (e.g., React, Angular, or HTML/CSS/JavaScript) for designing a user-friendly interface that allows customers to browse and submit orders.  
+- **Backend**:  
+  [Backend Technology] (e.g., Java with Spring Boot) to process customer interactions and manage orders using self-created data.
+
+### AdminPortal (Administration Interface)
+- **Frontend**:  
+  [Technology/Framework] for creating an intuitive interface that allows administrators to manage orders, inventory, and user details.  
+- **Backend**:  
+  Same backend technology as the Bookstore for consistent logic and data handling.
+
+### Shared Components
+- **Database**:  
+  **MySQL** is the centralized database shared by both Bookstore and AdminPortal. It stores all data, including customer information, orders, product details, and administrative logs, ensuring consistency across the application.  
+- **Security**:  
+  **Spring Security** provides a unified authentication and role-based access control mechanism for both Bookstore and AdminPortal, ensuring secure operations for customers and administrators.
+
 
 ---
 
