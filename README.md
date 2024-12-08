@@ -1,7 +1,7 @@
 # :package: ShirtStore Project 
 
  ## Abstract
-The E-Commerce website for the shirt store uses HTML, CSS, Javascript, Java, Spring Framework, Thymeleaf, Hibernate, and MYSQL. The key functionality focuses on user signup and login, user profile management, product management, shopping cart, order checkout and order history, and automatic email confirmation.
+The E-Commerce website for the shirt store uses HTML, CSS, Javascript, Kotlin, Spring Framework, Thymeleaf, Hibernate, and MYSQL. The key functionality focuses on user signup and login, user profile management, product management, shopping cart, order checkout and order history, and automatic email confirmation.
 
 ---
 
