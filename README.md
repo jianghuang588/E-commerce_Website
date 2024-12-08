@@ -1,7 +1,7 @@
 # :package: ShirtStore Project 
 
  ## Abstract
-The E-Commerce website for the shirt store uses HTML, CSS, Javascript, Kotlin, Spring Framework, Thymeleaf, Hibernate, and MYSQL. The key functionality focuses on user signup and login, user profile management, product management, shopping cart, order checkout and order history, and automatic email confirmation.
+The E-Commerce website for the shirt store uses HTML, CSS, Javascript, Java, Spring Framework, Thymeleaf, Hibernate, and MYSQL. The key functionality focuses on user signup and login, user profile management, product management, shopping cart, order checkout and order history, and automatic email confirmation.
 
 ---
 
@@ -86,19 +86,23 @@ Discover the basic characteristics of ShirtStore, which are organized in the fol
 - **Frontend**:
   - **CSS**: Styles are designed to be attractive in appearance.
   - **HTML**: Creates the layout of the website's page.
+  - **Java**: Utilize backend functionality and pass back to HTML
   - **JavaScript**: Pass the user interaction from frontend to backend.
   - **Thymeleaf**: Renders changes in data across websites, using Spring Boot.
 - **Backend**:
+  - **Java**: Design functionality or utilize the functionality exit on the interface. 
   - **Spring Boot**: Manages business logic and consumer relationships.
   - **MySQL**: Handles and saves data.
   - **Spring Security**: Ensures safe verification and entry restriction.
 
 ### AdminPortal (Administrative Layout) 
 - **Frontend**:
+  - **Java** Utilize backend functionality and pass back to HTML 
   - **CSS**: Styles manage the interface in a neat and expert manner.
   - **HTML**: Creates the layout of the administrative portal.
   - **Thymeleaf**: Renders interactive material to improve the operation of administration.
 - **Backend**:
+  - **Java**: Design functionality or utilize the functionality exit on the interface. 
   - **JavaScript**: Transfer input from users from frontend to backend.
   - **MySQL**: Handles data about users. 
   - **Spring Boot**: Manages operational logic and data processes.
