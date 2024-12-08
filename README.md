@@ -112,8 +112,42 @@ Discover the basic characteristics of ShirtStore, which are organized in the fol
 
 ---
 
+
 ## :arrow_right: How to Run the Project
-Follow these steps to run the ShirtStore project:
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-repo/shirtstore.git
+
+```bash
+# Download the project
+git clone https://github.com/jianghuang588/ecommerce_website_java.git
+
+# Configure the MySQL database
+# Ensure that MySQL is operating locally.
+# Initialize a schema in MySQL
+# The settings in application.properties must correspond with the database information.
+
+
+# Open the development environment (Eclipse, IntelliJ IDEA)
+# Import the existing maven project into your IDE 
+# Navigate to the root directory of ecommerce_website_java
+# Press finish
+
+# Construct and manage the project
+# Verify the resolution of Maven dependencies.
+# Launch the main class as a Java application after locating it.
+
+# Start the application
+# Standard user:
+#   - Access "http://localhost:8080/" in your web.
+#   - Utilize hardcoded user:
+#       - Username: h
+#       - Password: j
+#   - Or create a new user account using the application's interface.
+
+# Admin role:
+#   - Access "http://localhost:8081/admin/login" in your web.
+#   - Utilize hardcoded user:
+#       - Username: admin
+#       - Password: admin
+
+
+
+
