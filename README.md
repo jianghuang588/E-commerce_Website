@@ -82,23 +82,35 @@ Discover the basic characteristics of ShirtStore, which are organized in the fol
 
 ## :hammer: Implementation Tools
 
-### Bookstore (Customer-Facing Front-End)
-- **Frontend**:  
-  [Technology/Framework] (e.g., React, Angular, or HTML/CSS/JavaScript) for designing a user-friendly interface that allows customers to browse and submit orders.  
-- **Backend**:  
-  [Backend Technology] (e.g., Java with Spring Boot) to process customer interactions and manage orders using self-created data.
+### Shirtstore (User-Facing Front-End)
+- **Frontend**:
+  - **CSS**: Styles are designed to be attractive in appearance.
+  - **HTML**: Creates the layout of the website's page.
+  - **JavaScript**: Pass the interaction from frontend to backend.
+  - **Thymeleaf**: Renders changes in data across websites, using Spring Boot.
+- **Backend**:
+  - **Spring Boot**: Manages business logic and consumer relationships.
+  - **MySQL**: Handles and saves data.
+  - **Spring Security**: Ensures safe verification and entry restriction.
 
-### AdminPortal (Administration Interface)
-- **Frontend**:  
-  [Technology/Framework] for creating an intuitive interface that allows administrators to manage orders, inventory, and user details.  
-- **Backend**:  
-  Same backend technology as the Bookstore for consistent logic and data handling.
+### AdminPortal (Administrative Layout)
+- **Frontend**:
+  - **HTML**: Designs the structure and layout of the admin interface.
+  - **CSS**: Styles the admin portal for a clean and professional look.
+  - **Thymeleaf**: Renders dynamic content to streamline administrative workflows.
+- **Backend**:
+  - **Spring Boot**: Handles administrative logic and data processing.
+  - **MySQL**: Stores data related to users, orders, and inventory.
+  - **Spring Security**: Manages secure authentication and role-based access control.
+  - **JavaScript**: Adds backend interactivity and dynamic features.
 
 ### Shared Components
-- **Database**:  
-  **MySQL** is the centralized database shared by both Bookstore and AdminPortal. It stores all data, including customer information, orders, product details, and administrative logs, ensuring consistency across the application.  
-- **Security**:  
-  **Spring Security** provides a unified authentication and role-based access control mechanism for both Bookstore and AdminPortal, ensuring secure operations for customers and administrators.
+- **Database**:
+  - **MySQL**: Centralized database shared by Bookstore and AdminPortal to maintain data consistency.
+- **Security**:
+  - **Spring Security**: Unified authentication and access control across both systems.
+
+
 
 
 ---
