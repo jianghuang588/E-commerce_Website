@@ -11,6 +11,8 @@ Below is an animated overview of the ShirtStore platform's functionality. Click 
 **Navigation Path**:  
 **Step 1: My Account Dashboard** → **Step 2: Browse Shirt** → **Step 3: Shopping Cart** → **Step 4: Admin Portal – User and Shirt Management**
 
+
+**(gif file may take 1-2 minute to load due to the size)**
 <details>
 <summary>:arrow_right: <b>My Account Dashboard</b></summary>
 Manage your account, view order history, and update preferences.
